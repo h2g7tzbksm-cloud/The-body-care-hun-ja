@@ -1,0 +1,666 @@
+Index.html 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>The Body Care Hub Ja</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&family=Great+Vibes&display=swap"rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#fff5f8;
+color:#333;
+}
+
+/* TOP BAR */
+
+.top-bar{
+background:#e91e63;
+color:white;
+padding:10px 5%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+font-size:14px;
+}
+
+.top-bar span{
+letter-spacing:1px;
+}
+
+/* HEADER */
+
+header{
+background:#ffeaf1;
+padding:20px 5%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+text-align:center;
+flex:1;
+}
+
+.logo h1{
+font-family:'Playfair Display',serif;
+font-size:55px;
+color:#111;
+font-weight:600;
+}
+
+.logo span{
+display:block;
+margin-top:-15px;
+font-family:'Great Vibes',cursive;
+font-size:60px;
+color:#ff3c91;
+}
+
+.icons{
+display:flex;
+gap:20px;
+font-size:24px;
+}
+
+.menu{
+font-size:30px;
+}
+
+/* NAVIGATION */
+
+nav{
+background:#ffeaf1;
+padding-bottom:20px;
+text-align:center;
+}
+
+nav a{
+text-decoration:none;
+margin:0 20px;
+color:#222;
+font-weight:500;
+position:relative;
+}
+
+nav a:hover{
+color:#ff3c91;
+}
+
+.active{
+color:#ff3c91;
+}
+
+.active::after{
+content:'';
+position:absolute;
+left:0;
+bottom:-8px;
+width:100%;
+height:3px;
+background:#ff3c91;
+}
+
+/* HERO */
+
+.hero{
+min-height:90vh;
+background:linear-gradient(to right,#fff0f5,#ffd9e8);
+display:flex;
+align-items:center;
+justify-content:center;
+padding:60px 8%;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.hero-text{
+flex:1;
+min-width:300px;
+}
+
+.hero-text small{
+color:#d63384;
+letter-spacing:4px;
+font-weight:600;
+}
+
+.hero-text h2{
+font-size:85px;
+line-height:0.95;
+font-family:'Playfair Display',serif;
+margin:20px 0;
+}
+
+.hero-text h2 span{
+display:block;
+color:#ff3c91;
+font-family:'Great Vibes',cursive;
+font-size:100px;
+margin-top:10px;
+}
+
+.hero-text p{
+font-size:20px;
+line-height:1.8;
+margin:30px 0;
+max-width:550px;
+}
+
+.btn{
+display:inline-block;
+padding:18px 45px;
+border-radius:50px;
+background:#ff3c91;
+color:white;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#d81b60;
+transform:translateY(-3px);
+}
+
+.hero-image{
+flex:1;
+min-width:320px;
+text-align:center;
+}
+
+.hero-image img{
+width:100%;
+max-width:600px;
+border-radius:30px;
+}
+
+/* SLOGAN */
+
+.slogan{
+margin-top:25px;
+display:inline-block;
+border:2px solid #ff8db7;
+padding:15px 30px;
+border-radius:40px;
+color:#d63384;
+letter-spacing:4px;
+font-weight:600;
+}
+
+/* CATEGORY */
+
+.section-title{
+text-align:center;
+margin:80px 0 40px;
+}
+
+.section-title small{
+color:#ff3c91;
+letter-spacing:5px;
+font-weight:600;
+}
+
+.section-title h3{
+font-size:60px;
+font-family:'Playfair Display',serif;
+color:#d81b60;
+}
+
+.section-title h3 span{
+font-family:'Great Vibes',cursive;
+color:#ff3c91;
+}
+
+/* PRODUCTS */
+
+.products{
+padding:0 5% 80px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:30px;
+}
+
+.product{
+background:#ffeef5;
+border-radius:30px;
+overflow:hidden;
+transition:0.3s;
+}
+
+.product:hover{
+transform:translateY(-8px);
+}
+
+.product img{
+width:100%;
+height:300px;
+object-fit:cover;
+}
+
+.product-info{
+padding:20px;
+text-align:center;
+}
+
+.product-info h4{
+font-size:28px;
+color:#c2185b;
+margin-bottom:10px;
+font-family:'Playfair Display',serif;
+}
+
+/* FEATURES */
+
+.features{
+padding:0 5% 80px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.feature-box{
+background:#fff0f5;
+padding:35px;
+border-radius:25px;
+text-align:center;
+}
+
+.feature-box h5{
+color:#d81b60;
+margin:15px 0;
+font-size:24px;
+}
+
+/* ABOUT */
+
+.about{
+background:#fff0f5;
+padding:90px 5%;
+display:flex;
+align-items:center;
+gap:50px;
+flex-wrap:wrap;
+}
+
+.about-image{
+flex:1;
+min-width:300px;
+}
+
+.about-image img{
+width:100%;
+border-radius:30px;
+}
+
+.about-text{
+flex:1;
+min-width:300px;
+}
+
+.about-text small{
+color:#ff3c91;
+letter-spacing:4px;
+font-weight:600;
+}
+
+.about-text h2{
+font-size:65px;
+font-family:'Playfair Display',serif;
+margin:15px 0;
+color:#d81b60;
+}
+
+.about-text h2 span{
+font-family:'Great Vibes',cursive;
+color:#ff3c91;
+}
+
+.about-text p{
+line-height:2;
+margin:25px 0;
+font-size:18px;
+}
+
+/* FOOTER */
+
+footer{
+background:linear-gradient(to right,#e91e63,#ff4fa3);
+color:white;
+padding:70px 5% 30px;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+}
+
+.footer-logo h2{
+font-family:'Playfair Display',serif;
+font-size:45px;
+}
+
+.footer-logo span{
+display:block;
+font-family:'Great Vibes',cursive;
+font-size:55px;
+margin-top:-10px;
+}
+
+.footer-links a{
+display:block;
+color:white;
+text-decoration:none;
+margin:12px 0;
+}
+
+.subscribe input{
+width:100%;
+padding:15px;
+border:none;
+border-radius:10px;
+margin:15px 0;
+}
+
+.subscribe button{
+width:100%;
+padding:15px;
+border:none;
+border-radius:10px;
+background:white;
+color:#e91e63;
+font-weight:600;
+cursor:pointer;
+}
+
+.copyright{
+margin-top:40px;
+text-align:center;
+border-top:1px solid rgba(255,255,255,0.3);
+padding-top:25px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.logo h1{
+font-size:38px;
+}
+
+.logo span{
+font-size:45px;
+}
+
+.hero-text h2{
+font-size:55px;
+}
+
+.hero-text h2 span{
+font-size:70px;
+}
+
+.section-title h3{
+font-size:42px;
+}
+
+.about-text h2{
+font-size:45px;
+}
+
+nav a{
+display:block;
+margin:15px 0;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+
+<div class="top-bar">
+<span>✨ Welcome to The Body Care Hub Ja 💖</span>
+<span>Care • Nourish • Renew</span>
+</div>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="menu">☰</div>
+
+<div class="logo">
+<h1>The Body Care</h1>
+<span>Hub Ja</span>
+</div>
+
+<div class="icons">
+🔍 👤 🛍️
+</div>
+
+</header>
+
+<!-- NAV -->
+
+<nav>
+<a href="#" class="active">HOME</a>
+<a href="#shop">SHOP</a>
+<a href="#about">ABOUT US</a>
+<a href="#">CONTACT US</a>
+<a href="#">REVIEWS</a>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-text">
+
+<small>✦ CARE • NOURISH • RENEW ✦</small>
+
+<h2>
+Glow Naturally
+<span>Feel Beautiful</span>
+</h2>
+
+<p>
+Premium body care made to pamper,
+nourish and bring out your natural glow.
+</p>
+
+<a href="#shop" class="btn">SHOP NOW</a>
+
+<br><br>
+
+<div class="slogan">
+CARE • NOURISH • RENEW
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200&auto=format&fit=crop">
+
+</div>
+
+</section>
+
+<!-- SHOP -->
+
+<section id="shop">
+
+<div class="section-title">
+
+<small>✦ SHOP OUR COLLECTION ✦</small>
+
+<h3>
+Pamper Your <span>Skin</span>
+</h3>
+
+</div>
+
+<div class="products">
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?q=80&w=1200&auto=format&fit=crop">
+<div class="product-info">
+<h4>Body Lotions</h4>
+<p>Soft glowing hydration.</p>
+</div>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?q=80&w=1200&auto=format&fit=crop">
+<div class="product-info">
+<h4>Body Mists</h4>
+<p>Fresh feminine scents.</p>
+</div>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1619451334792-150fd785ee74?q=80&w=1200&auto=format&fit=crop">
+<div class="product-info">
+<h4>Body Scrubs</h4>
+<p>Exfoliate and renew.</p>
+</div>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?q=80&w=1200&auto=format&fit=crop">
+<div class="product-info">
+<h4>Body Washes</h4>
+<p>Luxurious daily cleansing.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- FEATURES -->
+
+<section class="features">
+
+<div class="feature-box">
+<h5>Premium Quality</h5>
+<p>High quality ingredients for healthy glowing skin.</p>
+</div>
+
+<div class="feature-box">
+<h5>Nourishing Care</h5>
+<p>Made to hydrate, soften and protect.</p>
+</div>
+
+<div class="feature-box">
+<h5>Glow Boosting</h5>
+<p>Enhance your natural glow every day.</p>
+</div>
+
+<div class="feature-box">
+<h5>Made With Love</h5>
+<p>Every product is crafted with care and passion.</p>
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<div class="about-image">
+
+<img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1200&auto=format&fit=crop">
+
+</div>
+
+<div class="about-text">
+
+<small>ABOUT US 💖</small>
+
+<h2>
+Skincare that
+<span>Loves You Back</span>
+</h2>
+
+<p>
+At The Body Care Hub Ja, we believe self-care is essential.
+Our products are made with love and high-quality ingredients
+to care for your skin, nourish your body and help you feel
+your best every day.
+</p>
+
+<a href="#" class="btn">LEARN MORE</a>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-grid">
+
+<div class="footer-logo">
+
+<h2>The Body Care</h2>
+<span>Hub Ja</span>
+
+<p style="margin-top:15px;">
+Care • Nourish • Renew 💖
+</p>
+
+</div>
+
+<div class="footer-links">
+
+<h3>Quick Links</h3>
+
+<a href="#">Home</a>
+<a href="#">Shop</a>
+<a href="#">About Us</a>
+<a href="#">Contact Us</Theskincareja@gmail.com>
+<a href="#">FAQ</a>
+
+</div>
+
+<div>
+
+<h3>Follow Us</h3>
+
+<p style="margin-top:15px; line-height:2;">
+Instagram<Theskincarehunja>
+TikTok<Theskincarehubja>
+WhatsApp</876-582-5106>
+
+</div>
+
+</div>
+
+<div class="copyright">
+© 2025 The Body Care Hub Ja. All Rights Reserved.
+</div>
+
+</footer>
